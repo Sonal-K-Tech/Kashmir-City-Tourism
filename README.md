@@ -15,7 +15,7 @@ A responsive, multi-page web platform designed to showcase the culture, destinat
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** HTML5, CSS3, JavaScript (ES6+)
+* **Frontend:** HTML5, CSS3
 * **Styling & Layout:** Modern CSS Grid, Flexbox, Custom CSS Tokens/Variables
 * **Tools & Editor:** VS Code, Git
 
