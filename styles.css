@@ -1,0 +1,368 @@
+/* styles.css - Upgraded for Peaceful, Otherworldly Kashmir Vibes */
+:root {
+    --alpine-deep: #0f2526;
+    --glacial-blue: #57ab73;
+    --misty-mint: #b5e1d3;
+    --chinar-gold: #b27c45;
+    --text-main: #3d4847;
+    --text-muted: #03342f;
+    --card-bg: rgba(214, 227, 234, 0.82);
+    --glass-border: rgba(47, 59, 76, 0.7);
+    --radius: 50px;
+    --max-width: 1040px;
+    --shadow-soft: 0 12px 35px -8px rgba(87, 17, 76, 0.08);
+    --shadow-hover: 0 20px 45px -10px rgba(64, 131, 135, 0.14);
+    --font-sans: "Plus Jakarta Sans", "Poppins", system-ui, -apple-system, sans-serif;
+    --font-serif: "Cormorant Garamond", Georgia, serif;
+}
+
+/* Background & Global Resets */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    background-color: #8263ba;
+    background-image: url('bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Ethereal morning-mist gradient overlay */
+.page-wrap {
+    min-height: 100%;
+    background: linear-gradient(135deg,
+            rgba(101, 164, 182, 0.86) 0%,
+            rgba(93, 118, 114, 0.92) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(6px);
+}
+
+/* Header / Glassmorphism Nav */
+.header {
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 28px;
+    margin-top: 24px;
+    background: var(--card-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-soft);
+    box-sizing: border-box;
+    gap: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.logo img {
+    height: 48px;
+    width: 48px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid rgba(220, 208, 208, 0.9);
+    box-shadow: 0 3px 10px rgba(15, 37, 38, 0.08);
+}
+
+.site-title {
+    font-family: var(--font-serif);
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    color: var(--alpine-deep);
+    margin: 0;
+}
+
+.nav {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 0.93rem;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    background: rgba(163, 193, 173, 0.3);
+    color: var(--alpine-deep);
+    transform: translateY(-1px);
+}
+
+/* Main Content Container with Subtle Top Glow */
+.container {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 28px 18px;
+    background: var(--card-bg);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: var(--shadow-soft);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Atmospheric top accent line */
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--glacial-blue), var(--chinar-gold), transparent);
+    opacity: 0.7;
+}
+
+/* Headings with Serif Grace */
+h1,
+h2,
+h3 {
+    margin: 12px 0;
+    color: var(--alpine-deep);
+    font-family: var(--font-serif);
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.1rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 1.02rem;
+}
+
+/* Editorial Page Header & Sub-tags */
+.page-header {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(15, 37, 38, 0.08);
+}
+
+.location-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--chinar-gold);
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+/* Fine-Art Framed Image Showcase (Perfect for Single Column) */
+.image-showcase {
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+    margin: 32px auto;
+    border-radius: 14px;
+    padding: 10px;
+    background: rgba(247, 240, 240, 0.65);
+    border: 1px solid rgba(218, 222, 223, 0.9);
+    box-shadow: var(--shadow-hover);
+}
+
+.image-showcase img {
+    width: 100%;
+    height: auto;
+    max-height: 560px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+    image-orientation: from-image;
+}
+
+.image-caption {
+    text-align: center;
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 12px;
+}
+
+/* Grid Layout for Multiple Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    align-items: start;
+    margin-top: 24px;
+}
+
+/* Image Cards with Floating Hover Effect */
+.card {
+    background: rgba(159, 185, 165, 0.85);
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(166, 107, 107, 0.95);
+    box-shadow: 0 8px 20px rgba(15, 40, 42, 0.05);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    text-align: left;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hover);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+    image-orientation: from-image;
+}
+
+.card:hover img {
+    transform: scale(1.03);
+}
+
+.card .card-body {
+    padding: 18px;
+}
+
+.card .card-title {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--alpine-deep);
+    margin: 0 0 8px 0;
+}
+
+.card .card-text {
+    font-size: 0.94rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Form Styling */
+form label {
+    display: block;
+    margin-top: 16px;
+    font-weight: 600;
+    font-size: 0.93rem;
+    color: var(--alpine-deep);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 16px;
+    margin-top: 6px;
+    border-radius: 12px;
+    border: 1px solid rgba(232, 234, 235, 0.12);
+    background: rgba(208, 200, 200, 0.95);
+    font-family: var(--font-sans);
+    color: var(--text-main);
+    font-size: 0.98rem;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--glacial-blue);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(163, 193, 173, 0.22);
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+button.primary {
+    margin-top: 24px;
+    background: var(--alpine-deep);
+    color: #fff;
+    border: none;
+    padding: 13px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(15, 37, 38, 0.15);
+}
+
+button.primary:hover {
+    background: #183b3d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(15, 37, 38, 0.22);
+}
+
+/* Footer */
+.footer {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 20px 18px;
+    padding: 16px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 16px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .container {
+        padding: 24px 20px;
+        margin: 12px;
+    }
+}
